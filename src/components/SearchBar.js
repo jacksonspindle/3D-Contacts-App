@@ -32,6 +32,7 @@ export default function SearchBar(){
                     <input 
                         id='input'
                         type="search" 
+                        autoComplete='off'
                         placeholder='find someone...'
                         className='searchBar'
                         onChange={(event) => {setSearchTerm(event.target.value);console.log(searchTerm)}}

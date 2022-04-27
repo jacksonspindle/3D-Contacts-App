@@ -1,14 +1,28 @@
 html {
     background-color: rgb(12,12,22);
+    user-select: none;
+    --webkit-user-select: none;
+    height: 100%;
 }
 
 h1{
     color: white;
+    font-size: 4px;
+    margin: .1px;
+}
+
+.h1Search{
     font-size: 20px;
+
 }
 
 h2 {
     color: gray;
+    font-size: 4px;
+    margin: .1px;
+}
+
+.h2Search{
     font-size: 15px;
 }
 
@@ -16,8 +30,16 @@ h2 {
     width: 12px;
 }
 
-::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+.phoneScreenContent::-webkit-scrollbar {
+    width: 5px;
+    /* margin-top: 20px; */
+    
+}
+
+
+
+.contactCardSearch > ::-webkit-scrollbar-track {
+    --webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
     border-radius: 10px;
     background-color: black;
 }
@@ -29,11 +51,17 @@ h2 {
 }
 
 
+ ::-webkit-scrollbar-track {
+    --webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+
+}
+
 .appContainer {
     display: flex;
     justify-content: center;
     overflow-y: scroll;
-    height: 600px;
+    height: 90px;
     margin-top: 10vw;
 }
 
@@ -46,17 +74,39 @@ h2 {
 .contactCard{
     display: flex;
     align-items: center;
+    margin-top: none;
+}
+
+.contactCardSearch{
+    display: flex;
+    align-items: center;
     margin-top: 10px;
 }
 
+
 .contactInfo{
-    margin-left: 5vw;
+    margin-left: 1vw;
+}
+
+.contactInfoSearch{
+    margin-left: 10vw;
 }
 
 
 .profilePhoto{
+    width: 20px;
+    height: .6rem;
+    border-radius: 50%;
+    margin-left: 2px;
+    pointer-events: none;
+
+}
+
+.profilePhotoSearch{
     width: 100px;
     border-radius: 50%;
+    pointer-events: none;
+    
 }
 
 
@@ -140,4 +190,23 @@ h2 {
 
 .searchResults{
     margin: 15px;
+}
+
+
+/* PHONE SCREEN */
+
+.phoneScreenContent{
+    width: 74.5px;
+    height: 74px;
+    overflow-x: hidden;
+
+}
+
+
+/* CANVAS */
+
+.canvas{
+    width: 100%;
+    height: 93vh;
+    z-index: 100;
 }
