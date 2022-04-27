@@ -4,6 +4,7 @@ import ContactCard from './components/ContactCard'
 import Phone from './components/Phone'
 import Scene from './components/Scene'
 import SearchBar from './components/SearchBar'
+import AddNewContact from './components/AddNewContact'
 import data from './data.js'
 import Style from './style.css'
 
@@ -26,6 +27,7 @@ export default function App() {
         <div>
             <div className='searchBarContainer'>
                 <SearchBar />    
+                <AddNewContact />
             </div>
             
             <Scene />
