@@ -1,0 +1,143 @@
+html {
+    background-color: rgb(12,12,22);
+}
+
+h1{
+    color: white;
+    font-size: 20px;
+}
+
+h2 {
+    color: gray;
+    font-size: 15px;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    background-color: black;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: lightblue;
+    border-radius: 10px;
+    /* -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5); */
+}
+
+
+.appContainer {
+    display: flex;
+    justify-content: center;
+    overflow-y: scroll;
+    height: 600px;
+    margin-top: 10vw;
+}
+
+/* CONTACT CARD */
+
+.contactsContainer{
+    flex-direction: column;
+}
+
+.contactCard{
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.contactInfo{
+    margin-left: 5vw;
+}
+
+
+.profilePhoto{
+    width: 100px;
+    border-radius: 50%;
+}
+
+
+/* SEARCH BAR */
+.searchBarContainer{
+    display: flex;
+    justify-content: center;
+    margin-top: 4vw;
+}
+
+.searchBoxContainer{
+    display: flex;
+    justify-content: center;
+}
+
+.searchBox{
+    position: absolute;
+    width: 480px;
+    height: 640px;
+    background-color: rgba(30, 30, 30, 0.72);
+    border: .1px solid rgba(90, 90, 90, 0.72);
+    /* opacity: .8; */
+    border-radius: 10px;
+    z-index: 120;
+    top: 100px;
+    overflow-y: scroll;
+    /* left: 38vw; */
+    /* margin-left: 1px; */
+
+}
+
+.searchIconContainer{
+    display: flex;
+    justify-content: center;
+}
+
+.searchIcon{
+    opacity: .7;
+    position: absolute;
+    top: 30px;
+    z-index: 110;
+    
+}
+
+.searchIcon:hover{
+    opacity: 1;
+    cursor: pointer;
+}
+
+.overlay{
+    background-color: black;
+    opacity: .7;
+    /* width: 100%; */
+    /* left: 2px; */
+    /* height: 800px; */
+    right: 0;
+    left: 0;
+    /* right: 300px; */
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    z-index: 110;
+}
+
+.searchBar{
+    width: 100%;
+    height: 60px;
+    background-color: rgba(30, 30, 30, 0.72);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border: none;
+    padding-left: 20px;
+    font-size: 30px;
+    color: white;
+    outline: none;
+}
+
+.searchBar::-webkit-search-cancel-button{
+    display: none;
+}
+
+.searchResults{
+    margin: 15px;
+}

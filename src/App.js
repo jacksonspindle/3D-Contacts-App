@@ -1,25 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import {React, useState} from 'react'
+import ReactDOM from 'react-dom'
+import ContactCard from './components/ContactCard'
+import SearchBar from './components/SearchBar'
+import data from './data.js'
+import Style from './style.css'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default function App() {
+
+    
+   
+    const contactData = data.map(item => {
+        return(
+            <ContactCard
+                key={item.key}
+                photo={item.photo} 
+                name={item.name}
+                age={item.age}
+                occupation={item.occupation}
+            />
+        )
+    })
+    return(
+        <div>
+            <div className='searchBarContainer'>
+                <SearchBar />    
+            </div>
+            <div className='appContainer'>
+                
+                <div className='contactsContainer'>
+                    {contactData}
+                </div>
+            </div>
+        </div>
+    )
 }
-
-export default App;
