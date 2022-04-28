@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect, useCallback } from 'react'
 import ContactCard from './ContactCard'
 import data from '../data'
-
+import axios from 'axios'
 
 export default function AddNewContact() {
 
@@ -58,12 +58,13 @@ export default function AddNewContact() {
                             data.push(newContact)
                             document.forms[0].reset()
 
-                            // console.log(newContact)
-                            // console.log(data)
+                            console.log(newContact)
 
-                            // EXPRESS
-
-                            
+                            axios.post('https://webhook.site/6ce716bd-24ae-42ac-ac47-373cca2b6504', newContact).then(response => {
+                                console.log(response)
+                            }).catch(error => {
+                                console.log(error)
+                            })
 
                         }}
                         ></button>
